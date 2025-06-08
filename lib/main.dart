@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
 
+import 'screens/init_screen.dart';
+
 void main() {
-  runApp(const MainApp());
+  runApp(const UebungMachtMeister());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class UebungMachtMeister extends StatelessWidget {
+  const UebungMachtMeister({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+    return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Uebung Macht Meister',
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.black26),
+          useMaterial3: true,
         ),
-      ),
-    );
+        initialRoute: '/',
+        routes: {
+          '/': (context) => InitScreen(),
+        });
   }
 }
