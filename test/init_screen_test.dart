@@ -11,5 +11,6 @@ void main() {
         find.text(
             'Morgen will ich sagen genau so wid jetzt: ich übe heute auch wie ich gestern gemacht habe.'),
         findsOneWidget);
+    expect(find.byKey(Key('navigateToCounterScreenButton')), findsOneWidget);
   });
 }
