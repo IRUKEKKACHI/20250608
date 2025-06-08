@@ -21,7 +21,10 @@ class _CounterScreenState extends State<CounterScreen> {
           child: Center(
             child: Column(
               children: [
-                Text('Counter $_count'),
+                Text(
+                  'Counter $_count',
+                  key: Key('counterText'),
+                ),
                 ElevatedButton(
                   key: Key('incrementButton'),
                   onPressed: () {
